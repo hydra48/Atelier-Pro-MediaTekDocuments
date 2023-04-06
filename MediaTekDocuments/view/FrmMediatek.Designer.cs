@@ -154,7 +154,6 @@ namespace MediaTekDocuments.view
             this.label16 = new System.Windows.Forms.Label();
             this.grpReceptionRevue = new System.Windows.Forms.GroupBox();
             this.label55 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.pcbReceptionExemplaireRevueImage = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -196,7 +195,7 @@ namespace MediaTekDocuments.view
             this.label67 = new System.Windows.Forms.Label();
             this.btnReceptionCommandeLivresValider = new System.Windows.Forms.Button();
             this.label66 = new System.Windows.Forms.Label();
-            this.dgvCommandesLivre = new System.Windows.Forms.DataGridView();
+            this.dgvComLivre = new System.Windows.Forms.DataGridView();
             this.btnRechercheDocLivre = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label69 = new System.Windows.Forms.Label();
@@ -238,7 +237,7 @@ namespace MediaTekDocuments.view
             this.label93 = new System.Windows.Forms.Label();
             this.btnajoutercommandedvd = new System.Windows.Forms.Button();
             this.label94 = new System.Windows.Forms.Label();
-            this.dgvCommandesDvd = new System.Windows.Forms.DataGridView();
+            this.dgvComsDvd = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txbCommandeDvdSynopsis = new System.Windows.Forms.TextBox();
             this.label82 = new System.Windows.Forms.Label();
@@ -275,7 +274,7 @@ namespace MediaTekDocuments.view
             this.label110 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label106 = new System.Windows.Forms.Label();
-            this.dgvAbonnementsRevue = new System.Windows.Forms.DataGridView();
+            this.dgvAbonnRevue = new System.Windows.Forms.DataGridView();
             this.btnRechercheDocRevue = new System.Windows.Forms.Button();
             this.txbCommandesRevueNumRecherche = new System.Windows.Forms.TextBox();
             this.label105 = new System.Windows.Forms.Label();
@@ -321,19 +320,19 @@ namespace MediaTekDocuments.view
             this.tabCommandesLivres.SuspendLayout();
             this.gbxEtapeSuivi.SuspendLayout();
             this.gbxInfosCommandeLivre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCommandesLivre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComLivre)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabCommandesDvd.SuspendLayout();
             this.gbxEtapeSuiviDvd.SuspendLayout();
             this.gbxInfosCommandeDvd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCommandesDvd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComsDvd)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabCommandesRevues.SuspendLayout();
             this.groupcommanderevue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAbonnementsRevue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAbonnRevue)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -1686,6 +1685,7 @@ namespace MediaTekDocuments.view
             this.btnReceptionExemplaireImage.TabIndex = 43;
             this.btnReceptionExemplaireImage.Text = "Rechercher";
             this.btnReceptionExemplaireImage.UseVisualStyleBackColor = true;
+            this.btnReceptionExemplaireImage.Click += new System.EventHandler(this.btnReceptionExemplaireImage_Click);
             // 
             // btnReceptionExemplaireValider
             // 
@@ -1761,7 +1761,6 @@ namespace MediaTekDocuments.view
             // grpReceptionRevue
             // 
             this.grpReceptionRevue.Controls.Add(this.label55);
-            this.grpReceptionRevue.Controls.Add(this.label48);
             this.grpReceptionRevue.Controls.Add(this.label56);
             this.grpReceptionRevue.Controls.Add(this.pcbReceptionExemplaireRevueImage);
             this.grpReceptionRevue.Controls.Add(this.label13);
@@ -1803,17 +1802,6 @@ namespace MediaTekDocuments.view
             this.label55.Size = new System.Drawing.Size(144, 17);
             this.label55.TabIndex = 57;
             this.label55.Text = "Image exemplaire :";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(743, 156);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(144, 17);
-            this.label48.TabIndex = 56;
-            this.label48.Text = "Image exemplaire :";
             // 
             // label56
             // 
@@ -2057,7 +2045,7 @@ namespace MediaTekDocuments.view
             this.tabCommandesLivres.AutoScroll = true;
             this.tabCommandesLivres.Controls.Add(this.gbxEtapeSuivi);
             this.tabCommandesLivres.Controls.Add(this.gbxInfosCommandeLivre);
-            this.tabCommandesLivres.Controls.Add(this.dgvCommandesLivre);
+            this.tabCommandesLivres.Controls.Add(this.dgvComLivre);
             this.tabCommandesLivres.Controls.Add(this.btnRechercheDocLivre);
             this.tabCommandesLivres.Controls.Add(this.groupBox1);
             this.tabCommandesLivres.Controls.Add(this.label74);
@@ -2164,7 +2152,7 @@ namespace MediaTekDocuments.view
             this.gbxInfosCommandeLivre.Size = new System.Drawing.Size(708, 316);
             this.gbxInfosCommandeLivre.TabIndex = 50;
             this.gbxInfosCommandeLivre.TabStop = false;
-            this.gbxInfosCommandeLivre.Text = "Informations de commande";
+            this.gbxInfosCommandeLivre.Text = "Informations sur la commande";
             this.gbxInfosCommandeLivre.Enter += new System.EventHandler(this.gbxInfosCommandeLivre_Enter);
             // 
             // btnInfosCommandeLivreAnnuler
@@ -2281,25 +2269,25 @@ namespace MediaTekDocuments.view
             this.label66.TabIndex = 12;
             this.label66.Text = "Numéro :";
             // 
-            // dgvCommandesLivre
+            // dgvComLivre
             // 
-            this.dgvCommandesLivre.AllowUserToAddRows = false;
-            this.dgvCommandesLivre.AllowUserToDeleteRows = false;
-            this.dgvCommandesLivre.AllowUserToResizeColumns = false;
-            this.dgvCommandesLivre.AllowUserToResizeRows = false;
-            this.dgvCommandesLivre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCommandesLivre.Location = new System.Drawing.Point(216, 327);
-            this.dgvCommandesLivre.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCommandesLivre.MultiSelect = false;
-            this.dgvCommandesLivre.Name = "dgvCommandesLivre";
-            this.dgvCommandesLivre.ReadOnly = true;
-            this.dgvCommandesLivre.RowHeadersVisible = false;
-            this.dgvCommandesLivre.RowHeadersWidth = 51;
-            this.dgvCommandesLivre.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCommandesLivre.Size = new System.Drawing.Size(735, 231);
-            this.dgvCommandesLivre.TabIndex = 49;
-            this.dgvCommandesLivre.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCommandesLivre_ColumnHeaderMouseClick_1);
-            this.dgvCommandesLivre.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommandeslivre_RowEnter);
+            this.dgvComLivre.AllowUserToAddRows = false;
+            this.dgvComLivre.AllowUserToDeleteRows = false;
+            this.dgvComLivre.AllowUserToResizeColumns = false;
+            this.dgvComLivre.AllowUserToResizeRows = false;
+            this.dgvComLivre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComLivre.Location = new System.Drawing.Point(216, 327);
+            this.dgvComLivre.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvComLivre.MultiSelect = false;
+            this.dgvComLivre.Name = "dgvComLivre";
+            this.dgvComLivre.ReadOnly = true;
+            this.dgvComLivre.RowHeadersVisible = false;
+            this.dgvComLivre.RowHeadersWidth = 51;
+            this.dgvComLivre.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvComLivre.Size = new System.Drawing.Size(735, 231);
+            this.dgvComLivre.TabIndex = 49;
+            this.dgvComLivre.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCommandesLivre_ColumnHeaderMouseClick_1);
+            this.dgvComLivre.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommandeslivre_RowEnter);
             // 
             // btnRechercheDocLivre
             // 
@@ -2548,7 +2536,7 @@ namespace MediaTekDocuments.view
             this.tabCommandesDvd.AutoScroll = true;
             this.tabCommandesDvd.Controls.Add(this.gbxEtapeSuiviDvd);
             this.tabCommandesDvd.Controls.Add(this.gbxInfosCommandeDvd);
-            this.tabCommandesDvd.Controls.Add(this.dgvCommandesDvd);
+            this.tabCommandesDvd.Controls.Add(this.dgvComsDvd);
             this.tabCommandesDvd.Controls.Add(this.groupBox2);
             this.tabCommandesDvd.Controls.Add(this.btnRechercheDocDvd);
             this.tabCommandesDvd.Controls.Add(this.txbCommandesDvdNumRecherche);
@@ -2655,7 +2643,7 @@ namespace MediaTekDocuments.view
             this.gbxInfosCommandeDvd.Size = new System.Drawing.Size(708, 247);
             this.gbxInfosCommandeDvd.TabIndex = 52;
             this.gbxInfosCommandeDvd.TabStop = false;
-            this.gbxInfosCommandeDvd.Text = "Informations de commande";
+            this.gbxInfosCommandeDvd.Text = "Informations sur la commande";
             this.gbxInfosCommandeDvd.Enter += new System.EventHandler(this.gbxInfosCommandeDvd_Enter);
             // 
             // btncommandesuvidvd
@@ -2772,25 +2760,25 @@ namespace MediaTekDocuments.view
             this.label94.TabIndex = 12;
             this.label94.Text = "Numéro de commande :";
             // 
-            // dgvCommandesDvd
+            // dgvComsDvd
             // 
-            this.dgvCommandesDvd.AllowUserToAddRows = false;
-            this.dgvCommandesDvd.AllowUserToDeleteRows = false;
-            this.dgvCommandesDvd.AllowUserToResizeColumns = false;
-            this.dgvCommandesDvd.AllowUserToResizeRows = false;
-            this.dgvCommandesDvd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCommandesDvd.Location = new System.Drawing.Point(216, 327);
-            this.dgvCommandesDvd.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCommandesDvd.MultiSelect = false;
-            this.dgvCommandesDvd.Name = "dgvCommandesDvd";
-            this.dgvCommandesDvd.ReadOnly = true;
-            this.dgvCommandesDvd.RowHeadersVisible = false;
-            this.dgvCommandesDvd.RowHeadersWidth = 51;
-            this.dgvCommandesDvd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCommandesDvd.Size = new System.Drawing.Size(735, 342);
-            this.dgvCommandesDvd.TabIndex = 51;
-            this.dgvCommandesDvd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCommandesDvd_ColumnHeaderMouseClick_1);
-            this.dgvCommandesDvd.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommandeDvd_RowEnter);
+            this.dgvComsDvd.AllowUserToAddRows = false;
+            this.dgvComsDvd.AllowUserToDeleteRows = false;
+            this.dgvComsDvd.AllowUserToResizeColumns = false;
+            this.dgvComsDvd.AllowUserToResizeRows = false;
+            this.dgvComsDvd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComsDvd.Location = new System.Drawing.Point(216, 327);
+            this.dgvComsDvd.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvComsDvd.MultiSelect = false;
+            this.dgvComsDvd.Name = "dgvComsDvd";
+            this.dgvComsDvd.ReadOnly = true;
+            this.dgvComsDvd.RowHeadersVisible = false;
+            this.dgvComsDvd.RowHeadersWidth = 51;
+            this.dgvComsDvd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvComsDvd.Size = new System.Drawing.Size(735, 342);
+            this.dgvComsDvd.TabIndex = 51;
+            this.dgvComsDvd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCommandesDvd_ColumnHeaderMouseClick_1);
+            this.dgvComsDvd.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommandeDvd_RowEnter);
             // 
             // groupBox2
             // 
@@ -3043,7 +3031,7 @@ namespace MediaTekDocuments.view
             this.tabCommandesRevues.Controls.Add(this.groupcommanderevue);
             this.tabCommandesRevues.Controls.Add(this.pictureBox4);
             this.tabCommandesRevues.Controls.Add(this.label106);
-            this.tabCommandesRevues.Controls.Add(this.dgvAbonnementsRevue);
+            this.tabCommandesRevues.Controls.Add(this.dgvAbonnRevue);
             this.tabCommandesRevues.Controls.Add(this.btnRechercheDocRevue);
             this.tabCommandesRevues.Controls.Add(this.txbCommandesRevueNumRecherche);
             this.tabCommandesRevues.Controls.Add(this.label105);
@@ -3076,7 +3064,7 @@ namespace MediaTekDocuments.view
             this.groupcommanderevue.Size = new System.Drawing.Size(732, 185);
             this.groupcommanderevue.TabIndex = 58;
             this.groupcommanderevue.TabStop = false;
-            this.groupcommanderevue.Text = "Informations de commande";
+            this.groupcommanderevue.Text = "Informations sur la commande";
             // 
             // datetimefinabonnementrevue
             // 
@@ -3204,25 +3192,25 @@ namespace MediaTekDocuments.view
             this.label106.TabIndex = 56;
             this.label106.Text = "Image exemplaire  :";
             // 
-            // dgvAbonnementsRevue
+            // dgvAbonnRevue
             // 
-            this.dgvAbonnementsRevue.AllowUserToAddRows = false;
-            this.dgvAbonnementsRevue.AllowUserToDeleteRows = false;
-            this.dgvAbonnementsRevue.AllowUserToResizeColumns = false;
-            this.dgvAbonnementsRevue.AllowUserToResizeRows = false;
-            this.dgvAbonnementsRevue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAbonnementsRevue.Location = new System.Drawing.Point(71, 327);
-            this.dgvAbonnementsRevue.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvAbonnementsRevue.MultiSelect = false;
-            this.dgvAbonnementsRevue.Name = "dgvAbonnementsRevue";
-            this.dgvAbonnementsRevue.ReadOnly = true;
-            this.dgvAbonnementsRevue.RowHeadersVisible = false;
-            this.dgvAbonnementsRevue.RowHeadersWidth = 51;
-            this.dgvAbonnementsRevue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAbonnementsRevue.Size = new System.Drawing.Size(637, 418);
-            this.dgvAbonnementsRevue.TabIndex = 55;
-            this.dgvAbonnementsRevue.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAbonnementsRevue_ColumnHeaderMouseClick);
-            this.dgvAbonnementsRevue.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAbonnementsRevue_RowEnter);
+            this.dgvAbonnRevue.AllowUserToAddRows = false;
+            this.dgvAbonnRevue.AllowUserToDeleteRows = false;
+            this.dgvAbonnRevue.AllowUserToResizeColumns = false;
+            this.dgvAbonnRevue.AllowUserToResizeRows = false;
+            this.dgvAbonnRevue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAbonnRevue.Location = new System.Drawing.Point(71, 327);
+            this.dgvAbonnRevue.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAbonnRevue.MultiSelect = false;
+            this.dgvAbonnRevue.Name = "dgvAbonnRevue";
+            this.dgvAbonnRevue.ReadOnly = true;
+            this.dgvAbonnRevue.RowHeadersVisible = false;
+            this.dgvAbonnRevue.RowHeadersWidth = 51;
+            this.dgvAbonnRevue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAbonnRevue.Size = new System.Drawing.Size(637, 418);
+            this.dgvAbonnRevue.TabIndex = 55;
+            this.dgvAbonnRevue.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAbonnementsRevue_ColumnHeaderMouseClick);
+            this.dgvAbonnRevue.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAbonnementsRevue_RowEnter);
             // 
             // btnRechercheDocRevue
             // 
@@ -3493,7 +3481,7 @@ namespace MediaTekDocuments.view
             this.gbxEtapeSuivi.PerformLayout();
             this.gbxInfosCommandeLivre.ResumeLayout(false);
             this.gbxInfosCommandeLivre.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCommandesLivre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComLivre)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -3503,7 +3491,7 @@ namespace MediaTekDocuments.view
             this.gbxEtapeSuiviDvd.PerformLayout();
             this.gbxInfosCommandeDvd.ResumeLayout(false);
             this.gbxInfosCommandeDvd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCommandesDvd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComsDvd)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -3512,7 +3500,7 @@ namespace MediaTekDocuments.view
             this.groupcommanderevue.ResumeLayout(false);
             this.groupcommanderevue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAbonnementsRevue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAbonnRevue)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -3666,7 +3654,6 @@ namespace MediaTekDocuments.view
         private System.Windows.Forms.PictureBox pcbReceptionExemplaireRevueImage;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label59;
@@ -3686,7 +3673,7 @@ namespace MediaTekDocuments.view
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Button btnReceptionCommandeLivresValider;
-        private System.Windows.Forms.DataGridView dgvCommandesLivre;
+        private System.Windows.Forms.DataGridView dgvComLivre;
         private System.Windows.Forms.Button btnRechercheDocLivre;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label69;
@@ -3731,7 +3718,7 @@ namespace MediaTekDocuments.view
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.Button btnajoutercommandedvd;
         private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.DataGridView dgvCommandesDvd;
+        private System.Windows.Forms.DataGridView dgvComsDvd;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txbCommandeDvdSynopsis;
         private System.Windows.Forms.Label label82;
@@ -3767,7 +3754,7 @@ namespace MediaTekDocuments.view
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label106;
-        private System.Windows.Forms.DataGridView dgvAbonnementsRevue;
+        private System.Windows.Forms.DataGridView dgvAbonnRevue;
         private System.Windows.Forms.Button btnRechercheDocRevue;
         private System.Windows.Forms.TextBox txbCommandesRevueNumRecherche;
         private System.Windows.Forms.Label label105;

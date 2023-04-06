@@ -33,11 +33,6 @@ namespace MediaTekDocuments.model
         public string Id { get; set; }
 
         /// <summary>
-        /// Récupère ou définit le libelle de l'état d'usure d'un exemplaire
-        /// </summary>
-        public string Libelle { get; set; }
-
-        /// <summary>
         /// Initialisation d'un objet Exemplaire
         /// </summary>
         /// <param name="numero">Numero del'exemplaire</param>
@@ -45,15 +40,14 @@ namespace MediaTekDocuments.model
         /// <param name="photo">Photo de l'exemplaire</param>
         /// <param name="idEtat">Id de l'état d'usure de l'exemplaire</param>
         /// <param name="idDocument">Id du document correspondant à l'exemplaire</param>
-        /// <param name="libelle">Libelle de l'état d'usure de l'exemplaire</param>
-        public Exemplaire(int numero, DateTime dateAchat, string photo, string idEtat, string idDocument, string libelle)
+        public Exemplaire(int numero, DateTime dateAchat, string photo, string idEtat, string idDocument)
         {
             this.Numero = numero;
             this.DateAchat = dateAchat;
             this.Photo = photo;
             this.IdEtat = idEtat;
             this.Id = idDocument;
-            this.Libelle = libelle;
+           
         }
 
     }
